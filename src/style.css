@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #252924; background: #f7f7f4; font-synthesis: none; text-rendering: optimizeLegibility; }
+:root[data-theme="dark"] { color-scheme: dark; color: #eef1eb; background: #181b18; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+.app-shell { max-width: 1040px; margin: 0 auto; padding: 0 48px; }
+.topbar { height: 78px; display: flex; align-items: center; border-bottom: 1px solid #e6e8e1; gap: 13px; }
+.brand { display: inline-flex; gap: 9px; align-items: center; color: inherit; text-decoration: none; font-size: 16px; font-weight: 750; letter-spacing: -.6px; }
+.brand-mark { display: grid; place-items: center; height: 27px; width: 27px; border-radius: 8px; color: #fff; background: #38694c; font-family: Georgia, serif; font-size: 20px; font-style: italic; }
+.brand-light { color: #7c827b; font-weight: 450; }
+.tagline { margin: 1px 0 0; font-size: 12px; color: #858b83; }
+.theme-toggle { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #e0e3dc; background: transparent; border-radius: 9px; color: inherit; padding: 8px 11px; font-size: 12px; }
+main { max-width: 756px; margin: 0 auto; }
+.intro { padding: 51px 0 33px; }
+.eyebrow { font-size: 10px; line-height: 1.5; font-weight: 750; letter-spacing: 1.5px; color: #588264; }
+h1 { margin: 10px 0 8px; font-size: clamp(30px, 5vw, 42px); line-height: 1.13; letter-spacing: -1.8px; font-weight: 650; }
+.intro-copy, .section-heading p { color: #7e847c; font-size: 14px; margin: 0; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.currency-row { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; }
+.currency-row label { color: #727971; font-size: 12px; font-weight: 600; }
+.currency-row select { max-width: 100%; border: 1px solid #e3e6df; border-radius: 7px; height: 36px; padding: 0 10px; outline: none; background: #fff; color: #282d28; font-size: 12px; }
+.currency-row select:focus { border-color: #588264; box-shadow: 0 0 0 3px #58826425; }
+h2 { margin: 0 0 4px; font-size: 17px; letter-spacing: -.3px; }
+.text-button { display: inline-flex; align-items: center; gap: 6px; background: none; border: 0; color: #737a72; font-size: 12px; padding: 8px 0 8px 8px; }
+.product-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+.product-card { border: 1px solid #e5e8e1; background: #fff; padding: 16px; border-radius: 12px; position: relative; min-width: 0; }
+.card-heading { display: flex; align-items: center; gap: 8px; padding-bottom: 15px; }
+.product-index { font-size: 10px; color: #8c948b; font-variant-numeric: tabular-nums; }
+.product-label { font-weight: 650; font-size: 12px; }
+.icon-button { margin-left: auto; color: #8b9189; border: 0; background: transparent; display: grid; place-items: center; padding: 5px; border-radius: 5px; }
+.icon-button:hover { color: #a43c34; background: #fff2f0; }
+.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; flex: 1; }
+.field > span { color: #727971; font-size: 11px; font-weight: 550; }
+.field input, .field select { width: 100%; min-width: 0; border: 1px solid #e3e6df; border-radius: 7px; height: 37px; padding: 0 10px; outline: none; background: #fff; color: #282d28; font-size: 12px; }
+.field input::placeholder { color: #a7aca5; }
+.field input:focus, .field select:focus { border-color: #588264; box-shadow: 0 0 0 3px #58826425; }
+.field input[aria-invalid="true"] { border-color: #d48b81; }
+.product-card > .field { margin-bottom: 12px; }
+.form-row { position: relative; display: flex; gap: 10px; margin-bottom: 12px; }
+.quantity-row { margin-bottom: 0; }
+.unit-field { max-width: 88px; }
+.card-price { border-top: 1px solid #edf0ea; margin: 15px 0 0; padding-top: 11px; font-size: 13px; font-weight: 700; color: #356347; }
+.card-price span { color: #858b83; font-weight: 450; font-size: 11px; }
+.validation { margin: 10px 0 0; color: #a94338; font-size: 11px; }
+.add-button { margin-top: 13px; width: 100%; height: 42px; background: transparent; border: 1px dashed #ccd2c9; color: #526b57; border-radius: 9px; display: flex; align-items: center; justify-content: center; gap: 7px; font-size: 12px; font-weight: 600; }
+.add-button:hover { background: #f0f4ee; border-color: #88a58e; }
+.results { border-top: 1px solid #e5e8e1; margin-top: 35px; padding-top: 24px; }
+.results-title { margin-bottom: 15px; }
+.results-title .eyebrow { margin: 0 0 4px; display: block; }
+.results-title h2 { font-size: 21px; }
+.winner { display: flex; align-items: center; gap: 13px; border: 1px solid #bed2c1; background: #f0f6ef; padding: 16px; border-radius: 11px; }
+.winner-icon { width: 38px; height: 38px; flex: 0 0 38px; border-radius: 50%; display: grid; place-items: center; background: #dcebdd; color: #386b49; }
+.winner-copy { min-width: 0; }
+.winner-label { display: block; font-size: 9px; color: #568161; font-weight: 750; letter-spacing: 1.2px; }
+.winner-copy h3 { margin: 3px 0; font-size: 15px; }
+.winner-copy p { margin: 0; color: #386b49; font-size: 13px; font-weight: 700; }
+.winner-copy p span { color: #748477; font-weight: 450; }
+.winner-badge { margin-left: auto; white-space: nowrap; color: #386b49; border: 1px solid #c8ddca; background: #f8fcf7; padding: 6px 9px; border-radius: 20px; font-size: 10px; font-weight: 650; }
+.result-group + .result-group { margin-top: 18px; }
+.result-group > h3 { font-size: 12px; color: #777e75; margin: 0 0 8px; font-weight: 600; }
+.runner-up { min-height: 51px; border-bottom: 1px solid #e8eae5; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 12px; font-size: 12px; }
+.runner-up > div { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 9px; row-gap: 3px; }
+.runner-up strong { font-weight: 600; }
+.runner-up > div span { color: #81877f; font-size: 11px; }
+.difference { color: #8b6a37; background: #f7f1e6; padding: 5px 8px; border-radius: 20px; white-space: nowrap; font-size: 10px; }
+.compatibility-note, .hint { color: #777e75; font-size: 12px; margin: 12px 0; }
+footer { border-top: 1px solid #e6e8e1; margin-top: 50px; padding: 17px 0 25px; color: #70776e; font-size: 11px; display: flex; justify-content: space-between; gap: 10px; }
+:root[data-theme="dark"] .topbar, :root[data-theme="dark"] footer, :root[data-theme="dark"] .results { border-color: #303630; }
+:root[data-theme="dark"] .product-card { background: #202520; border-color: #343b34; }
+:root[data-theme="dark"] .field input, :root[data-theme="dark"] .field select { background: #191d19; color: #edf0e9; border-color: #3a423a; color-scheme: dark; }
+:root[data-theme="dark"] .theme-toggle { border-color: #3a423a; }
+:root[data-theme="dark"] .currency-row select { background: #191d19; color: #edf0e9; border-color: #3a423a; color-scheme: dark; }
+:root[data-theme="dark"] .winner { background: #202c22; border-color: #405c45; }
+:root[data-theme="dark"] .winner-icon { background: #304935; }
+:root[data-theme="dark"] .winner-badge { background: #253329; border-color: #405c45; }
+:root[data-theme="dark"] .card-price { border-color: #343b34; }
+:root[data-theme="dark"] .runner-up { border-color: #303630; }
+:root[data-theme="dark"] .difference { background: #342c1e; color: #e3c68e; }
+:root[data-theme="dark"] .add-button:hover { background: #202c22; }
+button:focus-visible, a:focus-visible { outline: 3px solid #73a17e; outline-offset: 3px; }
+@media (max-width: 620px) { .app-shell { padding: 0 20px; } .topbar { height: 66px; } .tagline { display: none; } .intro { padding: 39px 0 27px; } .product-grid { grid-template-columns: 1fr; } .product-card { padding: 15px; } footer { flex-direction: column; } }
